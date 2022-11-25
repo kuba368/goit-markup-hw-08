@@ -6,6 +6,8 @@
     --butt-gray:#F5F4FA;
     --studio-color:#000000;
     --background-gray: #2F303A;
+    --clients-buttons: #AFB1B8;
+    --footer-social-btn:#FFFFFF1A;
 }
 body {
     margin: 0;
@@ -30,25 +32,35 @@ body {
     background-color: var(--white);
     border-bottom: 1px solid var(--studio-color);
 }
-.main.container {
-    justify-content: space-between;
+.main {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: left;
 }
 .main__links {
     list-style: none;
     display: flex;
-    flex-grow: 2;
-    max-width: 70%;
     gap: 46px;
     padding-left: 0;
 }
 .main__contacts {
     list-style: none;
     display: flex;
+    flex-grow: 1;
     flex-wrap: wrap;
+    justify-content: right;
+    padding-left: 0;
     gap: 50px;
+    color: var(--gray-color);
+}
+.main__mail-icon {
+    fill: var(--gray-color);
 }
 .main__logo {
     display: flex;
+    justify-content: left;
+    flex-grow: 1;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     line-height: 1.17;
@@ -59,8 +71,11 @@ body {
 .blue {
     color:var(--blue-color)
 }
-.gray-box {
+.section__background {
     background-color: var(--background-gray);
+    background-image: linear-gradient(#2F303A66,  #2F303A66 ), url(../images/office.jpg);
+    background-position: 50% 50%;;
+    max-width: 1600px;
 }
 .gray-container {
     display: flex;
@@ -83,21 +98,21 @@ body {
 }
 .section-header {
     margin: 0;
-    padding-top: 94px;
     padding-bottom: 50px;
     line-height: 1.17;
     font-weight: 700;
     font-size: 36px;
     text-align: center;
 }
-.section-header.no-padd {
+.no-padd {
     padding-top: 0;
 }
-.head3 {
+.cards__head {
     font-size: 14px;
     font-weight: 700;
     line-height: 1.17;
     padding-bottom: 10px;
+    padding-top: 30px;
     margin: 0;
 }
 .card-set {
@@ -105,7 +120,17 @@ body {
     padding-left: 0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
+}
+.cards__rect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 120px;
+    background-color: var(--butt-gray);
+    border-radius: 4px;
 }
 figure {
     margin: 0;
@@ -116,15 +141,17 @@ figure {
     list-style: none;
     flex-basis: calc((100% - 90px) / 4);
 }
-.item__member {
+.members__item {
     margin: 0;
     padding: 0;
+    background-color: var(--white);
     list-style: none;
     flex-basis: calc((100% - 90px) / 4);
     border-radius: 0 0 4px 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-.text {
+.cards__text {
+    margin: 0;
     font-size: 14px;
     line-height: 1.71;
     color: var(--gray-color);
@@ -139,7 +166,7 @@ figure {
     width: 100%;
     background-color: var(--butt-gray);
 }
-.member-name {
+.members__name {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.2;
@@ -147,14 +174,81 @@ figure {
     padding-top: 30px;
     margin: 0;
 }
-.team-role {
+.members__role {
     padding-top: 10px;
-    padding-bottom: 30px;
+    padding-bottom: 16px;
     margin: 0;
     font-size: 16px;
     line-height: 1.2;
     color: var(---);
     text-align: center;
+}
+.members__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding-left: 0;
+    padding-bottom: 30px;
+    gap: 10px;
+    list-style: none;
+}
+.member__btn {
+    width: 44px;
+    height: 44px;    
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social__icon.member__social {
+    fill: var(--clients-buttons);
+}
+.member__btn:hover,
+.member__btn:focus {
+    transition-duration: 300ms;
+    background-color: var(--blue-color);
+}
+.member__btn:hover .social__icon.member__social,
+.member__btn:focus .social__icon.member__social {
+    transition-duration: 300ms;
+    fill: var(--white)
+}
+.clients {
+    flex-direction: column;
+}
+.clients__buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding-left: 0;
+    gap: 30px;
+    list-style: none;
+}
+.clients__btn {
+    width: 170px;
+    height: 92px;
+    background-color: var(--white);
+    border: 1px solid var(--clients-buttons);
+    border-radius: 4px;
+    cursor: pointer;
+}
+.clients__icon {
+    fill: var(--clients-buttons);
+}
+.clients__btn:hover,
+.clients__btn:focus {
+    transition-duration: 300ms;
+    border: 1px solid var(--blue-color);
+}
+.clients__btn:hover .clients__icon,
+.clients__btn:focus .clients__icon {
+    transition-duration: 300ms;
+    fill: var(--blue-color)
 }
 .products {
     margin: 0;
@@ -183,6 +277,13 @@ figure {
     font-size: 16px;
     color: var(---);
     line-height: 1.9;
+}
+.products__item:hover,
+.products__item:focus {
+    cursor: pointer;
+    box-shadow: 1px 4px 6px 0px #00000029,
+                0px 4px 4px 0px #0000000F,
+                0px 1px 1px 0px #0000001F;
 }
 .button {
     display: block;
@@ -222,15 +323,14 @@ figure {
     padding-inline: 22px;
     border-radius: 4px;
 }
-.filters:focus {
-    transition-duration: 300ms;
-    background-color: var(--blue-color);
-    color: var(--white);
-}
+.filters:focus,
 .filters:hover {
     transition-duration: 300ms;
     background-color: var(--blue-color);
     color: var(--white);
+    box-shadow: 0px 2px 2px 0px #0000001F,
+                0px 1px 2px 0px #00000014,
+                0px 3px 1px 0px #0000001A;
 }
 .main__link {
     font-size: 14px;
@@ -238,37 +338,44 @@ figure {
     color: inherit;
     text-decoration: none;
     font-weight: 500;
+    position: relative;
 }
-.main__link:hover {
-    transition-duration: 300ms;
-    color: var(--blue-color);
+.main__mail-icon {
+    position: absolute;
+    top: 2px;
+    left: -26px;
 }
-.main__link.main__contacts:hover {
-    transition-duration: 300ms;
-    color: var(--blue-color);
+.main__phone-icon {
+    fill: var(--gray-color);
+    position: absolute;
+    left: -20px;
 }
-.main__link:focus {
-    transition-duration: 300ms;
-    color: var(--blue-color);
-}
+.main__link:hover,
+.main__link:focus,
+.main__link.main__contacts:hover,
 .main__link.main__contacts:focus {
     transition-duration: 300ms;
     color: var(--blue-color);
+    fill: var(--blue-color);
+}
+.main__link:hover .main__mail-icon,
+.main__link:focus .main__mail-icon,
+.main__link:hover .main__phone-icon,
+.main__link:focus .main__phone-icon {
+    fill: var(--blue-color);
 }
 .active-page {
     color: var(--blue-color);
 }
-.main__link.main__contacts {
-    color: var(---);
-}
 footer {
     width: 100%;
-    padding-top: 50px;
+    padding-top: 60px;
     background-color: var(--background-gray);
 }
-.footer.container {
-    display: block;
+.container.footer {
+    gap: 70px;
     justify-content: left;
+    align-items: baseline;
 }
 .footer__logo {
     display: flex;
@@ -279,10 +386,7 @@ footer {
     text-decoration: none;
     color: var(--white);
 }
-.footer__contact:hover {
-    transition-duration: 300ms;
-    color: var(--blue-color);
-}
+.footer__contact:hover,
 .footer__contact:focus {
     transition-duration: 300ms;
     color: var(--blue-color);
@@ -292,10 +396,13 @@ footer {
     font-size: 14px;
     line-height: 1.71;
     font-style: normal;
+    margin-top: 20px;
+    margin-bottom: 0;
 }
 .footer__contacts {
     list-style: none;
     padding-left: 0;
+    margin-top: 0;
     padding-bottom: 60px;
 }
 .footer__contact {
@@ -303,6 +410,47 @@ footer {
     line-height: 1.71;
     color: var(--alpha-white);
     font-style: normal;
+}
+.footer_head {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.17;
+    text-transform: uppercase;
+    color: var(--white);
+    margin: 0;
+    padding-top: 12px;
+    padding-bottom: 20px;
+}
+.footer__buttons {
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+    gap: 10px;
+    list-style: none;
+}
+.footer__btn {
+    width: 44px;
+    height: 44px;    
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--footer-social-btn);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social__icon {
+    fill: var(--white);
+}
+.footer__btn:hover,
+.footer__btn:focus {
+    transition-duration: 300ms;
+    background-color: var(--blue-color);
+}
+.footer__btn:hover .social__icon,
+.footer__btn:focus .social__icon {
+    transition-duration: 300ms;
+    fill: var(--white)
 }
 .hidden {
     visibility: hidden;

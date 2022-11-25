@@ -28,10 +28,21 @@
             </nav>
             <ul class="main__contacts">
                 <li>
-                    <a class="main__link main__contacts" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    <a class="main__link main__contacts" href="mailto:info@devstudio.com">
+                        <svg class="main__mail-icon" width="16" height="12">
+                            <use href="./images/icons.svg#icon-envelope"></use>
+                        </svg>
+                        info@devstudio.com
+                    </a>
+
                 </li>
                 <li>
-                    <a class="main__link main__contacts" href="tel:+48111111111">+48 111 111 111</a>
+                    <a class="main__link main__contacts" href="tel:+48111111111">
+                        <svg class="main__phone-icon" width="10" height="16">
+                            <use href="./images/icons.svg#icon-smartphone"></use>
+                        </svg>
+                        +48 111 111 111
+                    </a>
                 </li>
             </ul>
         </div>
@@ -135,15 +146,50 @@
         </section>
     </main>
     <footer>
-        <div class="footer container">
-            <a class="footer__logo" href="./index.html"><span class="blue">Web</span>Studio</a>
-            <address>
-                <p class="footer__address">m. Warszawa, Aleje Jerozolimskie 21</p>
-            </address>
-            <ul class="footer__contacts">
-                <li><a class="footer__contact main__link" href="mailto:info@example.com">info@example.com</a></li>
-                <li><a class="footer__contact main__link" href="tel:+48111111111">+48 111 111 111</a></li>
-            </ul>
+        <div class="container footer">
+            <div class="footer__main">
+                <a class="footer__logo" href="./index.html"><span class="blue">Web</span>Studio</a>
+                <address>
+                    <p class="footer__address">m. Warszawa, Aleje Jerozolimskie 21</p>
+                </address>
+                <ul class="footer__contacts">
+                    <li><a class="footer__contact main__link" href="mailto:info@example.com">info@example.com</a></li>
+                    <li><a class="footer__contact main__link" href="tel:+48111111111">+48 111 111 111</a></li>
+                </ul>
+            </div>
+            <div class="footer__social-media">
+                <h3 class="footer_head">Dołącz do nas</h3>
+                <ul class="footer__buttons">
+                    <li>
+                        <button class="footer__btn">
+                            <svg class="social__icon" width="20" height="20">
+                                <use href="./images/icons.svg#icon-instagram"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="footer__btn">
+                            <svg class="social__icon" width="20" height="20">
+                                <use href="./images/icons.svg#icon-twitter"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="footer__btn">
+                            <svg class="social__icon" width="20" height="20">
+                                <use href="./images/icons.svg#icon-facebook"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="footer__btn">
+                            <svg class="social__icon" width="20" height="20">
+                                <use href="./images/icons.svg#icon-linkedin"></use>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </div>
     </footer>
 </body>
