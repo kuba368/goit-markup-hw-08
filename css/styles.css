@@ -8,11 +8,22 @@
     --background-gray: #2F303A;
     --clients-buttons: #AFB1B8;
     --footer-social-btn:#FFFFFF1A;
+    --item-overlay-gray: #2F303ACC;
+    --overlay-gradient-gray: #2F303A66;
+    --product-overlay-blue:#2196F3E5;
+
 }
 body {
     margin: 0;
     font-family: 'Roboto', 'Raleway', sans-serif;
     color: #212121
+}
+h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.17;
+    text-transform: uppercase;
 }
 .container {    
     margin: 0 auto;
@@ -35,6 +46,7 @@ body {
 .main {
     display: flex;
     width: 100%;
+    height: 80px;
     align-items: center;
     justify-content: left;
 }
@@ -108,12 +120,8 @@ body {
     padding-top: 0;
 }
 .cards__head {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.17;
     padding-bottom: 10px;
     padding-top: 30px;
-    margin: 0;
 }
 .card-set {
     margin: 0;
@@ -157,10 +165,20 @@ figure {
     color: var(--gray-color);
 }
 .item-photo {
+    position: relative;
     margin: 0;
     padding: 0;
     list-style: none;
     flex-basis: calc((100% - 60px) / 3);
+}
+.item-photo > .label {
+    position: absolute;
+    width: 100%;
+    padding-block: 27px;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--item-overlay-gray);
+    bottom: 4px;
 }
 .team-background {
     width: 100%;
@@ -209,12 +227,14 @@ figure {
 }
 .member__btn:hover,
 .member__btn:focus {
-    transition-duration: 300ms;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     background-color: var(--blue-color);
 }
 .member__btn:hover .social__icon.member__social,
 .member__btn:focus .social__icon.member__social {
-    transition-duration: 300ms;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     fill: var(--white)
 }
 .clients {
@@ -242,12 +262,14 @@ figure {
 }
 .clients__btn:hover,
 .clients__btn:focus {
-    transition-duration: 300ms;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid var(--blue-color);
 }
 .clients__btn:hover .clients__icon,
 .clients__btn:focus .clients__icon {
-    transition-duration: 300ms;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     fill: var(--blue-color)
 }
 .products {
@@ -284,6 +306,32 @@ figure {
     box-shadow: 1px 4px 6px 0px #00000029,
                 0px 4px 4px 0px #0000000F,
                 0px 1px 1px 0px #0000001F;
+}
+.products__item:focus .products__overlay,
+.products__item:hover .products__overlay {
+    transform: translateY(0%);
+}
+.products__img {
+    position: relative;
+    overflow: hidden;
+}
+.products__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    text-align: left;
+    padding-block: 49px;
+    padding-right: 45px;
+    padding-left: 24px;
+    color: var(--white);
+    background-color: var(--product-overlay-blue);
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button {
     display: block;
@@ -325,7 +373,8 @@ figure {
 }
 .filters:focus,
 .filters:hover {
-    transition-duration: 300ms;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     background-color: var(--blue-color);
     color: var(--white);
     box-shadow: 0px 2px 2px 0px #0000001F,
@@ -354,9 +403,22 @@ figure {
 .main__link:focus,
 .main__link.main__contacts:hover,
 .main__link.main__contacts:focus {
-    transition-duration: 300ms;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     color: var(--blue-color);
     fill: var(--blue-color);
+}
+.main__link.main__nav:focus::after,
+.main__link.main__nav:hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: -32px;
+    left: 0;
+    border: 2px solid;
+    border-radius: 2px;
+    border-color: var(--blue-color);
+    background-color: var(--blue-color);
 }
 .main__link:hover .main__mail-icon,
 .main__link:focus .main__mail-icon,
@@ -366,6 +428,18 @@ figure {
 }
 .active-page {
     color: var(--blue-color);
+    position: relative;
+}
+.active-page::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: -32px;
+    left: 0;
+    border: 2px solid;
+    border-radius: 2px;
+    border-color: var(--blue-color);
+    background-color: var(--blue-color);
 }
 footer {
     width: 100%;
@@ -388,7 +462,8 @@ footer {
 }
 .footer__contact:hover,
 .footer__contact:focus {
-    transition-duration: 300ms;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     color: var(--blue-color);
 }
 .footer__address {
@@ -411,13 +486,8 @@ footer {
     color: var(--alpha-white);
     font-style: normal;
 }
-.footer_head {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.17;
-    text-transform: uppercase;
+.footer__head {
     color: var(--white);
-    margin: 0;
     padding-top: 12px;
     padding-bottom: 20px;
 }
@@ -444,17 +514,60 @@ footer {
 }
 .footer__btn:hover,
 .footer__btn:focus {
-    transition-duration: 300ms;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     background-color: var(--blue-color);
 }
 .footer__btn:hover .social__icon,
 .footer__btn:focus .social__icon {
-    transition-duration: 300ms;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     fill: var(--white)
 }
-.hidden {
+.is-hidden {
     visibility: hidden;
     pointer-events: none;
     opacity: 0;
     position: absolute;
+}
+.backdrop {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000033;
+    transition-property: visibility, opacity;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal {
+    position: absolute;
+    width: 528px;
+    height: 581px;
+    background-color: var(--white);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    opacity: inherit;
+    visibility: inherit;    
+    transition-property: visibility, opacity;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal__close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--white);
+    border: 1px solid #0000001A;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

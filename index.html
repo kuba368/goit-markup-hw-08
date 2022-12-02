@@ -17,13 +17,13 @@
                 <nav>
                     <ul class="main__links">
                         <li>
-                            <a class="main__link" href="#">Agencja</a>
+                            <a class="main__link main__nav" href="#">Agencja</a>
                         </li>
                         <li>
-                            <a class="main__link" href="./portfolio.html">Portfolio</a>
+                            <a class="main__link main__nav" href="./portfolio.html">Portfolio</a>
                         </li>
                         <li>
-                            <a class="main__link" href="#">Kontakt</a>
+                            <a class="main__link main__nav" href="#">Kontakt</a>
                         </li>
                     </ul>
                 </nav>
@@ -56,14 +56,14 @@
                 <div class="container">
                     <div class="gray-container">
                         <h1 class="big-text">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU </h1>
-                        <button class="button" type="button">Zamów usługę</button>
+                        <button class="button" data-modal-open>Zamów usługę</button>
                     </div>
                 </div>
             </section>  
             <!-- Trochę tekstu i zdjęcia miejsca pracy-->
             <section class="section container">
                 <div>
-                    <h2 class="hidden">lorem</h2>
+                    <h2 class="is-hidden">lorem</h2>
                     <ul class="card-set">
                         <li class="item">
                             <div class="cards__rect">
@@ -108,9 +108,18 @@
                 <div>
                     <h2 class="section-header">Czym się zajmujemy</h2>
                     <ul class="card-set">
-                        <li class="item-photo"><img src="./images/workplace1.jpg" alt="Miejsce pracy zespołu." width="370" height="294"></li>
-                        <li class="item-photo"><img src="./images/workplace2.jpg" alt="Miejsce pracy zespołu." width="370" height="294"></li>
-                        <li class="item-photo"><img src="./images/workplace3.jpg" alt="Miejsce pracy zespołu." width="370" height="294"></li>
+                        <li class="item-photo">
+                            <img src="./images/workplace1.jpg" alt="Miejsce pracy zespołu." width="370" height="294">
+                            <h3 class="label">Aplikacje komputerowe</h3>
+                        </li>
+                        <li class="item-photo">
+                            <img src="./images/workplace2.jpg" alt="Miejsce pracy zespołu." width="370" height="294">
+                            <h3 class="label">Aplikacje mobilne</h3>
+                        </li>
+                        <li class="item-photo">
+                            <img src="./images/workplace3.jpg" alt="Miejsce pracy zespołu." width="370" height="294">
+                            <h3 class="label">Rozwiązania graficzne</h3>
+                        </li>
                     </ul>  
                 </div>
             </section>
@@ -338,7 +347,7 @@
                 </ul>
             </div>
             <div class="footer__social-media">
-                <h3 class="footer_head">Dołącz do nas</h3>
+                <h3 class="footer__head">Dołącz do nas</h3>
                 <ul class="footer__buttons">
                     <li>
                         <button class="footer__btn">
@@ -372,5 +381,17 @@
             </div>
         </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="modal__close" data-modal-close>
+                <svg class="close-icon" width="18" height="18">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    
+    <script src="./js/modal.js"></script>
 </body>
 </html>
