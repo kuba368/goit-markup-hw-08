@@ -637,7 +637,8 @@ footer {
     line-height: 1.17;
 }
 .modal__input {
-    width: 448px;
+    width: 100%;
+    max-width: 448px;
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
