@@ -17,6 +17,9 @@
         border: 1px solid $color-clients-buttons-gray;
         border-radius: 4px;
         cursor: pointer;
+        @media screen and (max-width:$desktop) {
+            width: 226px;
+        }
     }
     &__icon {
         fill: $color-clients-buttons-gray;

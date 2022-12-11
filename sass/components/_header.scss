@@ -13,7 +13,14 @@
         list-style: none;
         display: flex;
         gap: 46px;
-        padding-left: 0;    
+        padding-left: 0;  
+        @media screen and(max-width:$tablet) {
+            display: none;
+        } 
+        &-wrapper {
+            display: flex;
+            flex-grow: 2;
+        } 
     }
     &__contacts {
         list-style: none;
@@ -23,7 +30,14 @@
         justify-content: right;
         padding-left: 0;
         gap: 50px;
-        color: $color-gray-text;        
+        color: $color-gray-text;    
+        @media screen and(max-width:$tablet) {
+            display: none;
+        }      
+        @media screen and (max-width:$desktop) {
+            flex-direction: column;
+            gap: 10px;   
+        }
     }
     &__mail-icon {
         position: absolute;

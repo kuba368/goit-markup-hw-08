@@ -15,7 +15,7 @@
         <div class="container">
             <div class="header__navigation-wrapper">
                 <a class="logo" href="./index.html"><span class="logo--blue">Web</span>Studio</a>
-                <nav>
+                <nav class="header__links-card-wrapper">
                     <ul class="header__links-card">
                         <li>
                             <a class="link link--underscore" href="#">Agencja</a>
@@ -49,6 +49,13 @@
                 </ul>
             </div>
         </div>
+        <div>
+            <button class="mobile-menu__button mobile-menu__button--open">
+                <svg class="mobile-menu__open-icon" width="40" height="40">
+                    <use href="./images/icons.svg#icon-menu_40px"></use>
+                </svg>
+            </button>
+        </div>
     </header>
     <main>
         <div>
@@ -63,7 +70,7 @@
             </section>  
 <!------------------SECTION CARDS------------------>
             <section class="section container cards">
-                <div>
+                <div class="cards__wrapper">
                     <h2 class="is-hidden">lorem</h2>
                     <ul class="cards__grid">
                         <li class="cards__item">
@@ -133,7 +140,8 @@
                         <ul class="cards__grid">
                             <li class="team__item">
                                 <figure>
-                                    <img src="./images/mr_doe.jpg" alt="Zdjęcie przedstawiające John Doe." width="270" height="260">
+                                    <img srcset="./images/mr_doe2px.jpg 2x, ./images/mr_doe.jpg 1x" src="./images/mr_doe.jpg" 
+                                    alt="Zdjęcie przedstawiające John Doe." width="270" height="260">
                                     <figcaption>
                                         <h2 class="team__member team__member--name">John Doe</h2>
                                         <div class="team__member team__member--role">Product Designer</div>
@@ -172,7 +180,8 @@
                             </li>
                             <li class="team__item">
                                 <figure>
-                                    <img src="./images/ms_doe.jpg" alt="Zdjęcie przedstawiające John Doe." width="270" height="260">
+                                    <img srcset="./images/ms_doe2px.jpg 2x, ./images/ms_doe.jpg 1x" src="./images/ms_doe.jpg" 
+                                    alt="Zdjęcie przedstawiające John Doe." width="270" height="260">
                                     <figcaption>
                                         <h2 class="team__member team__member--name">John Doe</h2>
                                         <div class="team__member team__member--role">Frontend Developer</div>
@@ -211,7 +220,8 @@
                             </li>
                             <li class="team__item">
                                 <figure>
-                                    <img src="./images/happy_doe.jpg" alt="Zdjęcie przedstawiające John Doe." width="270" height="260">
+                                    <img srcset="./images/happy_doe2px.jpg 2x, ./images/happy_doe.jpg 1x" src="./images/happy_doe.jpg" 
+                                    alt="Zdjęcie przedstawiające John Doe." width="270" height="260">
                                     <figcaption>
                                         <h2 class="team__member team__member--name">John Doe</h2>
                                         <div class="team__member team__member--role">Marketing</div>
@@ -250,7 +260,8 @@
                             </li>
                             <li class="team__item">
                                 <figure>
-                                    <img src="./images/proud_doe.jpg" alt="Zdjęcie przedstawiające John Doe." width="270" height="260">
+                                    <img srcset="./images/proud_doe2px.jpg 2x, ./images/proud_doe.jpg 1x" src="./images/proud_doe.jpg" 
+                                    alt="Zdjęcie przedstawiające John Doe." width="270" height="260">
                                     <figcaption>
                                         <h2 class="team__member team__member--name">John Doe</h2>
                                         <div class="team__member team__member--role">UI Designer</div>
@@ -383,9 +394,9 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer__form">
+            <div>
                 <h3 class="footer__head">Zapisz się do newslettera</h3>
-                <form>
+                <form class="footer__form">
                     <input class="footer__input" type="email" name="newsletter-signup" placeholder="E-mail">
                     <button class="footer__newsletter-btn" type="submit">
                         Zapisz się
@@ -460,7 +471,63 @@
             </form>
         </div>
     </div>
-    
+<!--------------------MOBILE MENU START-------------------->
+<div class="mobile-menu display-none">
+    <div class="mobile-menu__wrapper">
+        <button class="mobile-menu__button mobile-menu__button--close">
+            <svg class="mobile-menu__close-icon" width="40" height="40">
+                <use href="./images/icons.svg#icon-close_40px"></use>
+            </svg>
+        </button>
+        <nav>
+            <ul class="mobile-menu__links-card">
+                <li class="mobile-menu__item">
+                    <a class="mobile-menu__link active-page" href="#">Agencja</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a class="mobile-menu__link" href="./portfolio.html">Portfolio</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a class="mobile-menu__link" href="#">Kontakt</a>
+                </li>
+            </ul>
+        </nav>
+        <div>
+            <div class="mobile-menu__contacts">
+                <ul class="mobile-menu__links-card">
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link mobile-menu__link--blue" href="tel:+48111111111">+48111111111</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link mobile-menu__link--gray" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul class="mobile-menu__links-card mobile-menu__links-card--social">
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__social-links" href="#">Instagram</a>
+                    </li>
+                    <li class="line"></li>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__social-links" href="#">Twitter</a>
+                    </li>
+                    <li class="line"></li>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__social-links" href="#">Facebook</a>
+                    </li>
+                    <li class="line"></li>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__social-links" href="#">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--------------------MOBILE MENU END-------------------->
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 </html>

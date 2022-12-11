@@ -1,5 +1,8 @@
 .what-we-do {
     padding-top: 0;
+    @media screen and (max-width:$desktop) and (min-width:$mobile) {
+        display: none;
+    }
     
     &__item {
         position: relative;

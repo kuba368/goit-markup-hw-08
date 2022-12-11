@@ -19,6 +19,13 @@
         line-height: 1.17;
         font-size: 26px;
         text-decoration: none;
-        color: $color-primary-white;        
+        color: $color-primary-white; 
+        @media screen and (max-width:$tablet) {
+            justify-content: center;
+            }    
+        @media screen and (max-width:$desktop) {
+            justify-content: center;
+        }
+     
     }
 }

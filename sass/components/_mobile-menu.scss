@@ -1,0 +1,92 @@
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-block: 48px;
+    padding-inline: 40px;
+    background-color: $color-primary-white;
+
+    &__wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__button {
+        right: 19px;
+        top: 17px;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        background-color: $color-primary-white;
+        border: 0px $color-primary-white;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    &__button--open {
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+    &__close-icon {
+        position: absolute;
+        fill: $color-primary-black;
+        top: 0px;
+        left: 0px;
+    }
+    &__open-icon {
+        position: absolute;
+        fill: $color-primary-black;
+        top: 0px;
+        left: 0px;
+    }
+    &__button--close:hover .mobile-menu__close-icon,
+    &__button--close:focus .mobile-menu__close-icon {
+        fill: $color-primary-blue;
+        transition: $transition-cubic-bezier;
+    }
+    &__button--open:hover .mobile-menu__open-icon,
+    &__button--open:focus .mobile-menu__open-icon {
+        fill: $color-primary-blue;
+        transition: $transition-cubic-bezier;
+    }
+    &__links-card {
+        padding-left: 0;
+        list-style: none;
+        &--social {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 10px;
+        }
+    }
+    &__item {
+        margin-bottom: 32px;
+    }
+    &__link {
+        @extend .link;
+        font-size: 40px;
+        &--blue {
+            color: $color-primary-blue;
+            font-size: 34px;
+        }
+        &--gray {
+            color: $color-gray-text;
+            font-size: 24px;
+        }
+    }
+    &__social-links {
+        @extend .link;
+        font-size: 18px;
+        line-height: 1.22;
+        color: $color-primary-blue;
+    }
+
+}
+.line {
+    height: 22px;
+    border: 1px solid $color-line-gray;
+    background: $color-line-gray;
+}

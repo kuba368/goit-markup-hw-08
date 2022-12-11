@@ -2,6 +2,12 @@
     &__head {
         padding-bottom: 10px;
         padding-top: 30px;
+        @media screen and (max-width:$tablet) {
+            text-align: center;
+        }
+        @media screen and (max-width:$desktop) {
+            text-align: center;
+        }
     }
     &__grid {
         margin: 0;
@@ -19,6 +25,12 @@
         height: 120px;
         background-color: $color-background-gray;
         border-radius: 4px;
+        @media screen and (max-width:$tablet) {
+            width: 450px;
+        }
+        @media screen and (max-width:$desktop) {
+            width: 354px;
+        }
     }
     &__text {
         margin: 0;
