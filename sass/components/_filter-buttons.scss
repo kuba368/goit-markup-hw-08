@@ -1,0 +1,32 @@
+
+.filter-set {
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+    padding-bottom: 50px;
+    gap: 8px;
+    list-style: none;
+
+    &__button {
+        font-family: inherit;
+        background-color: $color-background-gray;
+        border: none;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.63;
+        text-align: center;
+        cursor: pointer;
+        padding-block: 6px;
+        padding-inline: 22px;
+        border-radius: 4px;
+    }
+    &__button:hover,
+    &__button:focus {
+        transition: $transition-cubic-bezier;
+        background-color: $color-primary-blue;
+        color: $color-primary-white;
+        box-shadow: 0px 2px 2px 0px #0000001F,
+                    0px 1px 2px 0px #00000014,
+                    0px 3px 1px 0px #0000001A;
+    }
+}

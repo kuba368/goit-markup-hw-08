@@ -1,0 +1,13 @@
+.backdrop {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000033;
+    transition-property: visibility, opacity;
+    transition: $transition-cubic-bezier;
+}

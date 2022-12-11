@@ -1,0 +1,17 @@
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &__background {
+    width: 100%;
+    background-color: $color-background-gray;
+    }
+    &__header {
+        margin: 0;
+        padding-bottom: 50px;
+        line-height: 1.17;
+        font-weight: 700;
+        font-size: 36px;
+        text-align: center;
+    }
+}

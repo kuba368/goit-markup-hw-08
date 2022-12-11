@@ -1,0 +1,35 @@
+.link {
+    font-size: 14px;
+    line-height: 1.17;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+
+    &:hover,
+    &:focus,
+    &.header__contacts:hover,
+    &.header__contacts:focus {
+        transition: $transition-cubic-bezier;
+        color: $color-primary-blue;
+        fill: $color-primary-blue;
+    }
+    &--underscore:focus::after,
+    &--underscore:hover::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        bottom: -32px;
+        left: 0;
+        border: 2px solid;
+        border-radius: 2px;
+        border-color: $color-primary-blue;
+        background-color: $color-primary-blue;
+    }
+    &:hover .header__mail-icon,
+    &:focus .header__mail-icon,
+    &:hover .header__phone-icon,
+    &:focus .header__phone-icon {
+        fill: $color-primary-blue;
+    }
+}

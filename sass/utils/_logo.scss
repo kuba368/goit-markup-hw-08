@@ -1,0 +1,24 @@
+.logo {
+    display: flex;
+    justify-content: left;
+    flex-grow: 1;
+    font-family: $font-raleway;
+    font-weight: 700;
+    line-height: 1.17;
+    font-size: 26px;
+    color: $color-primary-black;
+    text-decoration: none;
+
+    &--blue {
+        color:$color-primary-blue        
+    }
+    &--black {
+        display: flex;
+        font-family: $font-raleway;
+        font-weight: 700;
+        line-height: 1.17;
+        font-size: 26px;
+        text-decoration: none;
+        color: $color-primary-white;        
+    }
+}

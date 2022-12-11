@@ -1,0 +1,79 @@
+.footer {
+    &__head {
+        color: $color-primary-white;
+        padding-top: 12px;
+        padding-bottom: 20px;
+    }
+    &-wrapper {
+        gap: 70px;
+        justify-content: left;
+        align-items: baseline;
+        list-style: none;
+        padding-left: 0;
+        padding-bottom: 60px;
+    }
+    &__address {
+        color: $color-primary-white;
+        font-size: 14px;
+        line-height: 1.71;
+        font-style: normal;
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+    &__contacts {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
+    &__contacts-item {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 0;
+        line-height: 1.71;
+        color: $color-footer-contacts-text;
+        font-style: normal;
+    }
+    &__input {
+        width: 358px;
+        height: 50px;
+        color: $color-primary-white;
+        border: 1px solid #FFFFFF4D;
+        border-radius: 4px;
+        padding-inline: 16px;
+        padding-block: 15px;
+        background-color: #2196F300;
+        margin-right: 12px;
+        transition-property: border outline;  
+    }
+    &__newsletter-btn {
+        position: relative;
+        width: 200px;
+        height: 50px;
+        border: 1px solid $color-primary-blue;
+        border-radius: 4px;
+        color: $color-primary-white;
+        background-color: $color-primary-blue;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        padding-block: 10px;
+        padding-left: 42px;
+        padding-right: 76px;
+    }
+    &__send-icon {
+        fill: $color-primary-white;
+        position: absolute;
+        right: 28px;
+        top: 13px;
+    }
+    &__contacts-item:hover,
+    &__contacts-item:focus {
+        transition: $transition-cubic-bezier;
+        color: $color-primary-blue;
+    }
+    &__input:hover,
+    &__input:focus-within {
+        transition: $transition-cubic-bezier;
+        border: 1px solid $color-primary-blue;
+        outline: 1px solid $color-primary-blue;
+    }
+}

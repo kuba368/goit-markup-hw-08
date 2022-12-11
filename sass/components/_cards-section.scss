@@ -1,0 +1,35 @@
+.cards {
+    &__head {
+        padding-bottom: 10px;
+        padding-top: 30px;
+    }
+    &__grid {
+        margin: 0;
+        padding-left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+    &__rectangle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 270px;
+        height: 120px;
+        background-color: $color-background-gray;
+        border-radius: 4px;
+    }
+    &__text {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.71;
+        color: $color-gray-text;
+    }
+    &__item {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        flex-basis: calc((100% - 90px) / 4);
+    }
+}
