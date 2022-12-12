@@ -7,17 +7,17 @@
     height: auto;
     margin: 0 auto;
     @media screen and (max-width:$tablet) {
-        background-image: $linear-gradient, url(/images/mobile-banner1px.png);
+        background-image: $linear-gradient, url("/images/mobile-banner1px.png");
         padding-block: 0;
     }
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        background-image: $linear-gradient, url(/images/mobile-banner2px.png);
+        background-image: $linear-gradient, url("/images/mobile-banner2px.png");
     }
     @media screen and (max-width:$desktop) {
-        background-image: $linear-gradient, url(/images/office-tablet1px.jpg);
+        background-image: $linear-gradient, url("/images/office-tablet1px.jpg");
     }
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        background-image: $linear-gradient, url(/images/office-tablet2px.jpg);
+        background-image: $linear-gradient, url("/images/office-tablet2px.jpg");
     }
 
     &__big-text-wrapper {
